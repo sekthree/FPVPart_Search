@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--file: PartSearch.html -->
+<!--auth: sekthree, produktr -->
+<!--date: Sep 3, 2016 -->
+<!--desc: Search multiple sites at once for FPV components-->
+<html>
+<head><title>Parts Search</title>
+<style>
+.center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<div class="center">
+	<input id="search" type="text"/>&nbsp;<button onclick="search()">search</button>
+</div>
+</body>
+
+<script type="text/javascript">
+
+function search() {
+    var search = document.getElementById("search").value;
+	search=search.replace(/ /g,"%20");
+    if(search) {
+        var open = [
+			"https://hobbyking.com/en_us/catalogsearch/result/?q="+search,
+            "http://www.getfpv.com/catalogsearch/result/?cat=0&q="+search,
+            "http://www.helidirect.com/catalogsearch/result/?q="+search,
+            "http://www.buddyrc.com/catalogsearch/result/?q="+search,
+            "http://www.rotorgeeks.com/index.php?route=product/search&search="+search,
+            "https://newbeedrone.com/search?q="+search,
+            "http://www.rccrazed.com/advanced_search_result.php?keywords="+search,
+            "http://www.twistedquads.com/catalogsearch/result/?q="+search,
+            "http://www.multirotormania.com/search?controller=search&orderby=position&orderway=desc&search_query="+search,
+            "https://www.planethobby.com/search?type=product&q="+search,
+            "http://store.flitetest.com/search.php?search_query="+search,
+            "https://eastcoastfpv.com/search?q="+search,
+            "https://www.droneeclipse.com/search?q="+search,
+            "http://team-legit.com/search.asp?keyword="+search,
+            "http://www.gothelirc.com/shopdisplayproducts.asp?Search=Yes&sppp=20&page=1&Keyword="+search,
+            "http://www.readymaderc.com/store/index.php?main_page=advanced_search_result&search_in_description=1&keyword="+search,
+            "http://store.rotorriot.com/search.php?search_query="+search,
+            "https://www.rotorquest.com/index.php?route=product/search&search="+search,
+            "https://www.liftrc.com/catalogsearch/result/?cat=&q="+search,
+            "http://www.impulserc.com/filterSearch?q="+search,
+            "http://www.fpvempire.com/?s="+search+"&post_type=product",
+			"http://www.helidronerc.com/SearchResults.asp?Search="+search,
+			"https://www.fpvheadquarters.com/catalogsearch/result/?q="+search,
+			"https://www.droneracingsupply.com/search?q="+search,
+			"http://atmosphericadventures.com/index.php?main_page=advanced_search_result&search_in_description=1&keyword="+search,
+			"http://pirofliprc.com/search.asp?keyword="+search,
+			"https://www.racedayquads.com/search?type=product&q="+search,
+			"http://www.heli-nation.com/search/?q="+search,
+			"http://nolimitfpv.com/search?controller=search&orderby=position&orderway=desc&search_query="+search,
+			"https://www.flyrcnow.com/search?q="+search,
+			"https://www.multirotorinsanity.com/search?q="+search,
+			"https://crowncityfpv.com/?post_type=product&s="+search,
+			"https://www.amainhobbies.com/search?s="+search,
+			"http://innov8tivedesigns.com/catalogsearch/result/?q="+search,
+			"http://alofthobbies.com/search/?q="+search,
+			"https://www.pitchrollyaw.net/catalogsearch/result/?q="+search,
+			"http://midamericamultirotor.com/products?keywords="+search,
+			"http://www.multicopterwarehouse.com/index.php?route=product/search&search="+search,
+			"https://www.fpv303.com/?product_cat=&s="+search,
+			"http://www.fpv-depot.com/?s="+search,
+			"https://www.dronematters.com/custom-search?q="+search
+        ];
+        
+        console.log(open);
+        
+        for (i = 0; i < open.length; i++) { 
+            window.open(open[i], '_blank');
+        }
+    } else {
+        
+    }
+}
+</script>
+</html>
