@@ -3,6 +3,9 @@
 <!--auth: sekthree, produktr -->
 <!--date: Sep 3, 2016 -->
 <!--desc: Search multiple sites at once for FPV components-->
+<!--SITES REMOVED-->
+<!--"eastcoastfpv.com/search?q="+search,-->
+<!--"www.fpv303.com/?product_cat=&s="+search,-->
 <html>
 <head><title>Parts Search</title>
 <style>
@@ -36,22 +39,19 @@ function search() {
             "http://www.rotorgeeks.com/index.php?route=product/search&search="+search,
             "https://newbeedrone.com/search?q="+search,
             "http://www.rccrazed.com/advanced_search_result.php?keywords="+search,
-            "http://www.twistedquads.com/catalogsearch/result/?q="+search,
-            "http://www.multirotormania.com/search?controller=search&orderby=position&orderway=desc&search_query="+search,
+			"http://www.twistedquads.com/search.asp?keyword="+search,
+			"https://multirotormania.com/search?q="+search,
             "https://www.planethobby.com/search?type=product&q="+search,
             "http://store.flitetest.com/search.php?search_query="+search,
-            "https://eastcoastfpv.com/search?q="+search,
             "https://www.droneeclipse.com/search?q="+search,
             "http://team-legit.com/search.asp?keyword="+search,
             "http://www.gothelirc.com/shopdisplayproducts.asp?Search=Yes&sppp=20&page=1&Keyword="+search,
             "http://www.readymaderc.com/store/index.php?main_page=advanced_search_result&search_in_description=1&keyword="+search,
             "http://store.rotorriot.com/search.php?search_query="+search,
             "https://www.rotorquest.com/index.php?route=product/search&search="+search,
-            "https://www.liftrc.com/catalogsearch/result/?cat=&q="+search,
             "http://www.impulserc.com/filterSearch?q="+search,
             "http://www.fpvempire.com/?s="+search+"&post_type=product",
-			"http://www.helidronerc.com/SearchResults.asp?Search="+search,
-			"https://www.fpvheadquarters.com/catalogsearch/result/?q="+search,
+			"https://fpvheadquarters.com/search?type=product&q="+search,
 			"https://www.droneracingsupply.com/search?q="+search,
 			"http://atmosphericadventures.com/index.php?main_page=advanced_search_result&search_in_description=1&keyword="+search,
 			"http://pirofliprc.com/search.asp?keyword="+search,
@@ -67,16 +67,36 @@ function search() {
 			"https://www.pitchrollyaw.net/catalogsearch/result/?q="+search,
 			"http://midamericamultirotor.com/products?keywords="+search,
 			"http://www.multicopterwarehouse.com/index.php?route=product/search&search="+search,
-			"https://www.fpv303.com/?product_cat=&s="+search,
 			"http://www.fpv-depot.com/?s="+search,
-			"https://www.dronematters.com/custom-search?q="+search
+			"https://www.dronematters.com/custom-search?q="+search,
+			"http://graysonhobby.com/catalogsearch/result/?q="+search,
+			"https://www.falconhobbysupply.com/search/"+search,
+			"https://www.oashobby.com/search?q="+search,
+			"https://kadosmultirotors.com/search?type=product&q="+search
         ];
         
         console.log(open);
-        
-        for (i = 0; i < open.length; i++) { 
-            window.open(open[i], '_blank');
+		       
+        <!-- for (i = 0; i < open.length; i++)  -->
+		<!-- {  -->
+			<!-- if (i == open.length - 5) -->
+			<!-- { -->
+				<!-- exit; -->
+			<!-- } -->
+			<!-- for(x = i; x < (i+5);x++) -->
+			<!-- {			 -->
+				<!-- window.open(open[x], '_blank'); -->
+			<!-- } -->
+			<!-- setTimeout(function(){},50000); -->
+        <!-- } -->
+		
+		for (i = 0; i < open.length; i++) 
+		{ 
+			
+			window.open(open[i], '_blank');
+
         }
+		
     } else {
         
     }
